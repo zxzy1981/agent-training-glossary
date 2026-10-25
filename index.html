@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="面向旅游与酒店管理专业学生的术语速查工具">
+  <title>旅管词典｜专业术语速查</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav" aria-label="主导航"><a class="brand" href="./index.html"><b>旅</b>旅管词典</a><span>旅游 × 酒店管理</span></nav>
+    <div class="hero-inner">
+      <p class="eyebrow">— 专业学习随身指南</p>
+      <h1>把行业语言，<br><em>装进行囊。</em></h1>
+      <p class="intro">从饭店运营到目的地管理，快速理解课堂、实训和行业案例中的高频概念。</p>
+      <label class="search" for="search-input">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3m2.3-5.2A7.5 7.5 0 1 1 4 11.5a7.5 7.5 0 0 1 15 0Z"/></svg>
+        <input id="search-input" type="search" placeholder="搜索术语、类别或解释…" autocomplete="off">
+        <kbd>⌘ K</kbd>
+      </label>
+    </div>
+    <div class="route" aria-hidden="true">01 <i></i> 36</div>
+  </header>
+  <main>
+    <section class="glossary" aria-labelledby="heading">
+      <div class="heading"><div><small>EXPLORE THE GLOSSARY</small><h2 id="heading">专业术语速查</h2></div><p id="result-count" aria-live="polite"></p></div>
+      <div id="category-filters" class="filters" aria-label="按专业类别筛选"></div>
+      <div id="term-grid" class="grid"></div>
+      <div id="empty-state" class="empty" hidden><b>⌁</b><h3>这条路线暂时没有发现</h3><p>试试缩短关键词，或切换到其他专业类别。</p><button id="reset-button" type="button">清除筛选</button></div>
+    </section>
+  </main>
+  <footer><p><strong>旅管词典</strong> · 为旅游与酒店管理学习而设计</p><p>内容仅作教学辅助，行业实践请以所在机构规范为准。</p></footer>
+  <dialog id="term-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-top"><span id="dialog-category" class="pill"></span><button id="dialog-close" class="close" aria-label="关闭详情">×</button></div>
+    <h2 id="dialog-title"></h2><p id="dialog-summary" class="summary"></p><hr><h3>完整解释</h3><p id="dialog-detail"></p><button id="dialog-done" class="done">知道了</button>
+  </dialog>
+</body>
+</html>
